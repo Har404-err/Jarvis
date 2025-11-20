@@ -4,10 +4,10 @@ const { getUser, addExp, updateUser } = require('../lib/userDb');
 // Ganti link di bawah ini dengan link gambar (JPG/PNG) yang kamu suka
 const RPG_IMAGES = {
     profile: 'https://i.pinimg.com/564x/3d/15/60/3d156018f046c5b63c64002f43a45833.jpg', // Gambar Profil Galaxy
-    adventure: 'https://i.pinimg.com/564x/31/21/29/3121294af4f4964659f925671d142861.jpg', // Gambar Hutan/Petualangan
-    daily: 'https://i.pinimg.com/564x/7c/34/81/7c348119632d21910b182d6975638347.jpg', // Gambar Harta Karun
-    inventory: 'https://i.pinimg.com/564x/55/7c/e1/557ce1f3a9948565de7c65e02c48416f.jpg', // Gambar Tas/Item
-    heal: 'https://i.pinimg.com/564x/f8/09/31/f8093144d70950f84226c63b24f045d2.jpg'  // Gambar Rumah Sakit/Potion
+    adventure: 'https://i.imgur.com/yALlPHs.jpeg', // Gambar Hutan/Petualangan
+    daily: 'https://i.imgur.com/PAbYULL.jpeg', // Gambar Harta Karun
+    inventory: 'https://i.imgur.com/8QSHdwK.jpeg', // Gambar Tas/Item
+    heal: 'https://i.imgur.com/NsFNuaI.jpeg'  // Gambar Rumah Sakit/Potion
 };
 
 // Helper waktu cooldown

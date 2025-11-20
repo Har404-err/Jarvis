@@ -145,7 +145,7 @@ const soraCommand = require('./commands/sora');
 const pinterestCommand = require('./commands/pinterest');
 const jadwalBolaCommand = require('./commands/jadwalbola');
 const ytplayvidCommand = require('./commands/ytplayvid');
-
+const rpgCommand = require('./commands/rpg')
 
 // Global settings
 global.packname = settings.packname;
@@ -433,6 +433,22 @@ async function handleMessages(sock, messageUpdate, printLog) {
                 const mentionedJidListWarnings = message.message.extendedTextMessage?.contextInfo?.mentionedJid || [];
                 await warningsCommand(sock, chatId, mentionedJidListWarnings);
                 break;
+            // --- FITUR RPG START ---
+            case userMessage === '.rpg':
+            case userMessage === '.menu-rpg':
+            case userMessage === '.profile':
+            case userMessage === '.adventure':
+            case userMessage === '.daily':
+            case userMessage === '.claim':
+            case userMessage === '.inv':
+            case userMessage === '.inventory':
+            case userMessage === '.heal':
+                // Panggil fungsi RPG
+                const senderName = message.pushName || "User";
+                await rpgCommand(sock, chatId, message, userMessage, [], senderId, senderName);
+                commandExecuted = true;
+                break;
+            // --- FITUR RPG END ---
            case userMessage.startsWith('.pin') || userMessage.startsWith('.pinterest'):
                 await pinterestCommand(sock, chatId, message);
                 break;
